@@ -1,0 +1,452 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic)
+@import url(https://fonts.googleapis.com/css?family=Acme)
+
+* 
+    box-sizing: border-box     
+
+body 
+    margin: 0
+    font-family: 'Open Sans', sans-serif
+
+$kodilla-white: #fff
+
+.row:before,
+.row:after 
+    content: " " /* 1 */
+    display: table /* 2 */   
+
+.row:after 
+    clear: both
+
+.container 
+    max-width: 1200px
+    width: 100%
+    margin: 0 auto
+
+/* header */
+  header 
+    background-color: #313234
+    height: 50px
+    background-color: rgba(0, 0, 0, 0.5)
+    nav
+      img 
+        padding: 10px 0
+        height: 50px
+        width: 200px
+      ul 
+        float: right
+        margin: 0
+        list-style-type: none
+        li 
+          display: inline-block
+          a
+            line-height: 50px
+            display: block
+            color: #fff
+            padding: 0 20px
+            text-decoration: none
+            text-transform: uppercase
+            &:hover
+              background: #ccc
+
+/* welcome */
+  .hero 
+    height: calc(100vh - 50px)
+    background: url(https://images.unsplash.com/photo-1483058712412-4245e9b90334?dpr=1&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=&bg=) center
+    background-size: cover
+
+  .slogan 
+    background-color:rgba(0, 0, 0, 0.5)
+    max-width: 500px
+    position: absolute
+    top: 50%
+    right: 0
+    transform: translate(0, -50%)
+      h1 
+        text-align: right
+        color: #ccc
+        font-size: 40px
+        text-transform: uppercase
+        margin: 0
+
+/* benefit */
+  .benefit
+    position: relative
+    width: 100%
+    display: inline-block
+    margin-top: 60px
+    text-align: center
+    margin-bottom: 50px
+      i 
+        width: 80px 
+        height: 40px
+        font-size: 20px
+        border-radius: 10%
+        margin: 5px auto
+        cursor: pointer
+        background: #ccc
+        line-height: 40px
+        text-align: center	
+        $:hover 
+          cursor: pointer
+          background: #ccff66
+          line-height: 40px
+          text-align: center 
+          color: #006666
+      p
+        text-align: center
+      h2
+        text-align: center
+      h4 
+        text-align: center
+      &:hover
+        cursor: pointer
+        background: #ccff66
+        line-height: 40px
+        text-align: center 
+        color: #006666
+
+      .fa-stack 
+        position: relative
+        display: inline-block
+        width: 80px
+        height: 2em
+        line-height: 2em
+        vertical-align: middle
+
+      .fa-lg 
+        font-size: 1.33333333em
+        line-height: 0.75em
+        vertical-align: -15%
+
+      .unit1 
+        background-color: $kodilla-white
+
+      .unit2 
+        background-color: $kodilla-white
+
+      .unit3 
+        background-color: $kodilla-white
+
+/* Galeria */
+  .gallery-item 
+    position: relative
+    width: 100% 
+    img 
+        width: 100%
+        display: block
+        height: 12vw
+        object-fit: cover
+        &:hover img
+          transform: translate(0, 0)
+    i
+        margin:0 30px
+
+    .cover 
+        position: absolute
+        top: 0
+        right: 0
+        bottom: 0
+        left: 0
+        background:rgba(0 ,0, 0, 0.3)
+        opacity: 0
+        text-align: center
+        padding-top: calc(5.5vw - 11px)
+        color: $kodilla-white
+        transition: .5s
+        &:hover 
+          opacity: 1
+          cursor: pointer
+
+        .fa-camera-retro:hover 
+          cursor: pointer
+          background: #9933ff
+          text-align: center 	
+          color: #f59609
+
+        .fa-camera:hover 
+          cursor: pointer
+          background: #9933ff
+          text-align: center
+          color: #b67c77
+
+/* staff */
+  .staff 
+    position: relative
+    margin-top: 60px
+    left: 0px
+    width: 100%
+    display: inline-block
+    text-align: center
+    min-height: 1px
+    background-color: $kodilla-white
+      span 
+        position: relative
+        overflow: hidden
+        height: 150px
+        width: 150px
+        line-height: 150px
+        display: inline-block
+        border-radius: 50%
+        cursor: pointer
+        background-color: #cc99ff
+      img
+        position: absolute
+        width: 100%
+        height: 100%
+        object-fit: cover
+        top: 0
+        left: 0
+        transition: .5s
+        &:hover 
+          opacity: 0 
+
+/* picture */
+  .picture
+    height: 100%
+    width: 100%
+    background-color: #9900cc
+    p
+      position: relative
+      left: 10px
+      color: white
+    h1 
+      max-width: 800px
+      position: relative
+      left: 10px
+      color: white
+    img 
+      margin-top: 10vh
+      margin-right: 30px
+      height: auto
+      max-width: 240px
+      border-radius: 10%
+      float: right
+
+/* numbers */
+  .numbers
+    position: relative
+    margin-top: 60px
+    left: 0px
+    width: 100%
+    display: inline-block
+    text-align: center
+    background-color: $kodilla-white
+    span 
+      position: relative
+      display: inline-block
+      font-family: Acme
+      font-style: normal
+      font-weight: bold
+      font-size: 2.2em
+      color: #000; 
+      text-align: center;
+      background-color: $kodilla-white 
+    p
+      position: relative
+      display: inline-block
+      font-style: normal
+      font-size: 10px
+      color: #0000cc 
+      text-align: center
+      background-color: $kodilla-white 
+
+/* footer */
+  .footer
+    height: 100%
+    width: 100%
+    background-color: #313234
+    p
+      text-align: center
+      color: white
+    h1
+      max-width: 800px
+      position: relative
+      left: 10px
+      color: white
+    h4
+      position: relative
+      left: 10px
+      color: white
+    table
+      width: 100%
+      color: white
+      th,
+      td
+        padding: 5px
+        text-align: left
+
+    .social
+      max-width: 500px
+      text-align: left
+      padding: 0px
+
+      .icon-btn 
+        height: 75px
+        width: 75px
+        border: 0
+        color: $kodilla-white
+        border-radius: 50%
+        margin: 0 auto
+        padding-left: 0
+        cursor: pointer
+        font-size: 40px
+        line-height: 75px
+        &:hover 
+          transform: scale(1.10)
+
+          .twitter
+            color: #4099FF
+            &:hover 
+              background-color: #4099FF
+              color: $kodilla-white
+
+          .facebook 
+            color: #3B5998
+            &:hover
+              background-color: #3B5998
+              color: $kodilla-white
+
+          .google-plus
+            color: #DB5A3C
+            &:hover 
+              background-color: #DB5A3C
+              color: $kodilla-white
+
+          .instagram
+            color: #5C3D2E
+            &:hover 
+              background-color: #5C3D2E
+              color: $kodilla-white
+
+          .github
+                color: #4183C4
+                &:hover 
+                  background-color: #4183C4
+                  color: $kodilla-white
+
+  [class*="col-"]
+    float: left
+    min-height:1px
+    padding: 0px
+
+/* For mobiles */
+  @media (max-width: 768px)
+    nav
+      ul
+        display: block
+        background-color: #4b5b5c
+        height: auto
+        padding-left: 0
+        float: none
+        li 
+          display: block
+          float: none
+          width: 100%
+          margin-bottom: 10px
+        img
+          max-width: 100%
+          height: auto
+          display: block
+  
+  .gallery-item
+    img
+        height: 62vh
+  
+    .numbers,
+    .staff,
+    .picture
+      float: none
+      display: block
+  
+    .picture
+      h1 
+        font-size: 20px
+        
+  [class*="col-"]
+    float: left
+    width: 100%
+    height: 100%
+
+/*For tablets */
+  @media (max-width: 991px)
+    .col-sd-1 
+      width: 8.33%
+    .col-sd-2 
+      width: 16.66%
+    .col-sd-3 
+      width: 25%
+    .col-sd-4 
+      width: 33.33%
+    .col-sd-5 
+      width: 41.66%
+    .col-sd-6 
+      width: 50%
+    .col-sd-7 
+      width: 58.33%
+    .col-sd-8 
+      width: 66.66%
+    .col-sd-9 
+      width: 75%
+    .col-sd-10 
+      width: 83.33%
+    .col-sd-11 
+      width: 91.66%
+    .col-sd-12 
+      width: 100%
+
+/* For mid screens */
+  @media (max-width: 1199px) 
+    .col-md-1 
+      width: 8.33%
+    .col-md-2 
+      width: 16.66%
+    .col-md-3 
+      width: 25%
+    .col-md-4 
+      width: 33.33%
+    .col-md-5 
+      width: 41.66%
+    .col-md-6 
+      width: 50%
+    .col-md-7 
+      width: 58.33%
+    .col-md-8 
+      width: 66.66%
+    .col-md-9 
+      width: 75%
+    .col-md-10 
+      width: 83.33%
+    .col-md-11 
+      width: 91.66%
+    .col-md-12 
+      width: 100%
+    .slogan h1 
+      font-size: 30px
+
+/* For desktop */
+  @media (min-width: 1200px) 
+    .col-1 
+      width: 8.33%
+    .col-2 
+      width: 16.66%
+    .col-3 
+      width: 25%
+    .col-4 
+      width: 33.33%
+    .col-5 
+      width: 41.66%
+    .col-6 
+      width: 50%
+    .col-7 
+      width: 58.33%
+    .col-8 
+      width: 66.66%
+    .col-9 
+      width: 75%
+    .col-10 
+      width: 83.33%
+    .col-11 
+      width: 91.66%
+    .col-12 
+      width: 100%
